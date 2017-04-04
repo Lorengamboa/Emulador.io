@@ -1,0 +1,76 @@
+<html>
+<title>
+    <%= title %>
+</title>
+<header>
+    <% include layouts/header %>
+        <link href="/css/card.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/components/icon.min.css" rel="stylesheet" />
+</header>
+
+<body>
+    <% include layouts/navbar %>
+
+        <div class="container" style="margin-top:5%">
+            <!-- Paginated Games -->
+            <div class="row">
+              <div class="ui five cards">
+                <% for(var i=0; i<games.length; i++) {%>
+                        <div class="card">
+                            <a class="image" href="<%= console %>/<%= games[i].gameID %>">
+                            <img src="<%= games[i].cover_img %>">
+                        </a>
+                            <div class="content">
+                                <a class="header" href="#">
+                                    <%= games[i].title %>
+                                </a>
+                                <div class="extra content">
+                                    <i class="user icon"></i>
+                                    <%= games[i].views %> Views
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+            </div>
+            </div>
+            <ul class="pagination center">
+                <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                <% for(var i=0; i<pages; i++) {%>
+                    <% if(npage === i){ %>
+                        <li class="active">
+                            <a href="?page=<%= i +1%>">
+                                <%= i +1%>
+                            </a>
+                        </li>
+                        <% } else{ %>
+                            <li class="waves-effect">
+                                <a href="?page=<%= i +1%>">
+                                    <%= i +1%>
+                                </a>
+                            </li>
+                            <% } %>
+                                <% } %>
+                                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+            </ul>
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <!-- Most played games -->
+                    <div class="carousel">
+                        <% for(var i=0; i<top5played.length; i++) {%>
+                            <a class="carousel-item" href="<%= console %>/<%= top5played[i].gameID %>"><img src="<%= top5played[i].cover_img %>"></a>
+                            <% } %>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <% include layouts/footer %>
+            <% include layouts/jsimports %>
+                <script>
+                    $(document).ready(function() {
+                        $('.carousel').carousel();
+                    });
+                </script>
+</body>
+
+</html>

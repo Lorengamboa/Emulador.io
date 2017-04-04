@@ -1,0 +1,33 @@
+<nav class="teal lighten-1">
+    <div class="nav-wrapper">
+        <a href="/" class="brand-logo">EMULADOR.IO</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+                <div class="nav-wrapper">
+                    <form action="/search">
+                        <div class="input-field teal lighten-2">
+                            <input id="search" spellcheck="false" autocomplete="off" name="game" type="search">
+                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons">close</i>
+                        </div>
+                    </form>
+                </div>
+            </li>
+            <% if(user){ %>
+                <li><a href="/profile"><img class="nav-pf" src="<%= user.profilepic %>" style="  height: 100%;width: 70px;"></a></li>
+                <% }  %>
+                    <% if(!user){ %>
+                        <li><a class="waves-effect teal lighten-2 btn" href="/login">LOGIN</a></li>
+                        <% } else{ %>
+                            <!-- Dropdown Structure -->
+                            <li><a class="dropdown-button" href="#" data-activates="dropdown1"><i class="material-icons right">menu</i></a></li>
+                            <ul id='dropdown1' class='dropdown-content'>
+                                <li><a href="/profile">Profile</a></li>
+                                <li><a href="/logout">Log Out</a></li>
+                            </ul>
+                            <% } %>
+
+        </ul>
+
+    </div>
+</nav>

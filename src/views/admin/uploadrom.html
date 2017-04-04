@@ -1,0 +1,73 @@
+<html>
+<title>
+    <%= title %>
+</title>
+<% include ../layouts/header %>
+
+    <body>
+        <% include ../layouts/navbar %>
+
+            <div class="container z-depth-4" style="padding:2%; margin-top:1%">
+              <h3 class="header"> Upload A single rom </h3>
+                <!-- Upload rom form -->
+                <form id="uploadromForm" class="col s12" method="post" enctype="multipart/form-data" >
+                    <!-- Title input -->
+                    <div class="row" style="margin-top:10%">
+                        <div class="input-field col s6 l14">
+                            <input name="title" placeholder="Title Game" id="first_name" type="text" class="validate">
+                            <label for="first_name">Title</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Select console input -->
+                        <div class="input-field col s12 m6 l4">
+                            <select name="console" class="icons">
+                              <option value="" disabled selected>Choose a console</option>
+                              <option value="gameboy" data-icon="/img/png/gameboy.png" class="left circle">gameboy</option>
+                              <option value="gameboy-color" data-icon="/img/png/gameboy-color.png" class="left circle">gameboy color</option>
+                              <option value="gameboy-advance" data-icon="/img/png/gameboy-advance.png" class="left circle">gameboy advance</option>
+                              <option value="nes" data-icon="/img/png/snes.png" class="left circle">nes</option>
+                              <option value="snes" data-icon="/img/svg/nes-controller.svg" class="left circle">snes</option>
+                            </select>
+                        </div>
+                        <!-- Select rom input -->
+                        <div class="file-field input-field col s12 m6 l6">
+                            <a class="waves-effect waves-light btn"><i class="material-icons left">videogame_asset</i>
+                            <span>ROM UPLOAD</span>
+                            <input name="rom" type="file">
+                        </a>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text" placeholder="Select a rom">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Synopsis input -->
+                        <div class="input-field col s6 l12">
+                            <textarea name="synopsis" id="textarea" class="materialize-textarea" data-length="900"></textarea>
+                            <label for="textarea">Synapsis</label>
+                        </div>
+                        <!-- img cover url input -->
+                        <div class="input-field col l12">
+                            <input name="cover" placeholder="cover" id="first_name" type="text" class="validate">
+                        </div>
+                    </div>
+                    <!-- Commit Button -->
+                    <div class="col s12 offset-s3">
+                        <input type="submit" value="Upload rom" class="btn"><br>
+                    </div>
+                </form>
+            </div>
+
+            <% include ../layouts/footer %>
+            <% include ../layouts/jsimports %>
+                <script src="/js/jquery.form.min.js"></script>
+                <script src="/js/uploadrom.js"></script>
+                <script>
+                    $(document).ready(function() {
+                        $('select').material_select();
+                    });
+                </script>
+    </body>
+
+</html>

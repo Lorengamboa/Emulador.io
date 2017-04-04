@@ -1,0 +1,81 @@
+<html>
+<title></title>
+
+<head>
+    <% include layouts/header %>
+        <link href="/css/login.css" rel="stylesheet">
+        <link href="/css/bootstrap-social.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/components/icon.min.css" rel="stylesheet" />
+        <link href="/css/message.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Card Login Panel -->
+        <div id="login-card" class="z-depth-1 grey lighten-3" style="width:80%;margin-left:10%;margin-top:5%">
+            <br>
+            <h3 class="center-align" style="font-family: 'Source Sans Pro', sans-serif;">LOGIN IN TO ACCESS</h3>
+            <div class="row">
+                <!-- Login form authentification -->
+                <form id="loginform" class="col s12" action="/login" method="post">
+                    <div class="row">
+                        <!-- Input username -->
+                        <div class="input-field col s12 offset-s3">
+                            <input name="username" type="text" class="validate" style="width:50%">
+                            <label for="username">Username</label>
+                        </div>
+                        <!-- Input password -->
+                        <div class="input-field col s12 offset-s3">
+                            <input name="password" type="password" class="validate" style="width:50%">
+                            <label for="password">Password</label>
+                        </div>
+                        <!-- Login Button -->
+                        <div class="col s12 offset-s3">
+                            <input type="submit" value="Sign In" class="btn" style="width:50%"><br>
+                            <a href="/resetpassword">Forgot password?</a>&nbsp&nbsp&nbsp<a href="/signup">Register Now!</a>
+                        </div>
+                        <div class="col s12 offset-s3" style="width:50%">
+                          <div class="ui error message">
+                        <i class="close icon"></i>
+                        <div class="header">
+                            Either password or email are wrong
+                        </div>
+                      </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Social Network authetification -->
+            <div class="row">
+                <h5><span>or</span></h5>
+                <!-- Facebook login button -->
+                <div class="sn-btn col s12 offset-s3">
+                    <a class="btn btn-block btn-social btn-facebook" style="width:50%">
+                        <span class="fa fa-facebook"></span> Sign in with Facebook
+                    </a>
+                </div>
+                <!-- Google login button -->
+                <div class="sn-btn col s12 offset-s3">
+                    <a href="/auth/google" class="btn btn-block btn-social btn-google" style="width:50%">
+                        <span class="fa fa-google"></span> Sign in with Google
+                    </a>
+                </div>
+                <!-- Twitter login button -->
+                <div class="sn-btn col s12 offset-s3">
+                    <a class="btn btn-block btn-social btn-twitter" style="width:50%;margin-bottom:3%">
+                        <span class="fa fa-twitter"></span> Sign in with Twitter
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <% include layouts/jsimports %>
+        <script src="/js/jquery.form.min.js"></script>
+</body>
+
+</html>

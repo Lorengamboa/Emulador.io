@@ -1,0 +1,68 @@
+<html>
+<title></title>
+<header>
+        <% include layouts/header %>
+        <link href="/css/login.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Freckle+Face" rel="stylesheet">
+</header>
+
+<body>
+    <div class="container">
+
+        <!-- Card Login Panel -->
+        <div id="login-card" class="z-depth-1 grey lighten-3">
+            <br>
+            <h3 id="title-card" class="center-align">CREATE A NEW ACCOUNT</h3>
+            <div class="row">
+                <!-- Login form authentification -->
+                <form id="registerForm" class="col s12" method="post">
+                    <div class="row">
+                        <!-- Input username -->
+                        <div class="input-field col s12 offset-s3">
+                            <input name="username" type="text" class="validate" minlength="5" maxlength="12" required>
+                            <label for="username">Username</label>
+                        </div>
+                        <!-- Input password -->
+                        <div class="input-field col s12 offset-s3">
+                            <input id="password" name="password" type="password" class="validate" required>
+                            <label for="password2">Password</label>
+                        </div>
+                        <!-- Input password2 -->
+                        <div class="input-field col s12 offset-s3">
+                            <input id="confirm_password" name="password2" type="password" class="validate" required>
+                            <label for="password2">Password</label>
+                        </div>
+                        <!-- Input name -->
+                        <div class="input-field col s12 offset-s3">
+                            <input name="name" type="text" class="validate" minlength="2" maxlength="12" required>
+                            <label for="name">Name</label>
+                        </div>
+                        <!-- Input surname -->
+                        <div class="input-field col s12 offset-s3">
+                            <input name="surname" type="text" class="validate" minlength="2" maxlength="12" required>
+                            <label for="surname">Surname</label>
+                        </div>
+                        <!-- Input email -->
+                        <div class="input-field col s12 offset-s3">
+                            <input name="email" type="email" class="validate" required>
+                            <label for="email">Email</label>
+                        </div>
+                        <!-- Register Button -->
+                        <div class="col s12 offset-s3">
+                            <input type="submit" value="Register" class="btn" style="width:50%"><br>
+                            <a href="/login">Go back!</a>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <% include layouts/jsimports %>
+    <script src="/js/jquery.form.min.js"></script>
+    <script src="/js/signup.js"></script>
+</body>
+
+</html>

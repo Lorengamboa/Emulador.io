@@ -1,0 +1,54 @@
+<html>
+<title>
+    <%= title %>
+</title>
+<% include ../layouts/header %>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+
+    <body>
+        <% include ../layouts/navbar %>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col l12">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th data-field="id">Picture</th>
+                                    <th data-field="name">Username</th>
+                                    <th data-field="name">Email</th>
+                                    <th data-field="price">Name</th>
+                                    <th data-field="price">Surname</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <% for(var i=0; i< users.length ; i++) {%>
+                                    <tr>
+                                        <th>
+                                            <image class="responsive-img" src="<%= users[i].profilePicture %>" style="height:50px;width:50px;"/>
+                                        </th>
+                                        <th>
+                                            <%= users[i].username %>
+                                        </th>
+                                        <th>
+                                            <%= users[i].email %>
+                                        </th>
+                                        <th>
+                                            <%= users[i].name %>
+                                        </th>
+                                        <th>
+                                            <%= users[i].surname %>
+                                        </th>
+                                    </tr>
+                                    <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <% include ../layouts/jsimports %>
+    </body>
+
+</html>

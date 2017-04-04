@@ -1,0 +1,75 @@
+<html>
+<title>
+    <%= title %>
+</title>
+
+<head>
+    <% include layouts/header %>
+        <link href="/css/card.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <% include layouts/navbar %>
+
+        <div class="container">
+
+            <div class="row">
+                <!-- gb card panel -->
+                <div class="col s6 m4 l4">
+                    <a href="/gameboy">
+                        <div class="card-panel grey lighten-2 hoverable">
+                            <img src="img/svg/gb.svg">
+                        </div>
+                    </a>
+                </div>
+                <!-- Gbc card panel -->
+                <div class="col s6 m4 l4">
+                    <a href="/gameboy-color">
+                        <div class="card-panel grey lighten-2 hoverable">
+                            <img src="img/svg/gbc.svg">
+                        </div>
+                    </a>
+                </div>
+                <!-- Gba card panel -->
+                <div class="col s6 m4 l4">
+                    <a href="/gameboy-advance">
+                        <div class="card-panel grey lighten-2 hoverable">
+                            <img src="img/svg/gba.svg">
+                        </div>
+                    </a>
+                </div>
+                <!-- Nes card panel -->
+                <div class="col s6 m4 l4">
+                    <a href="/nes">
+                        <div class="card-panel grey lighten-2 hoverable">
+                            <img src="img/svg/nes.svg">
+                        </div>
+                    </a>
+                </div>
+                <!-- Nes card panel -->
+                <div class="col s6 m4 l4">
+                    <a href="/snes">
+                        <div class="card-panel grey lighten-2 hoverable">
+                            <img src="img/svg/snes.svg">
+                        </div>
+                    </a>
+                </div>
+                <!-- Gba card panel -->
+                <div class="col s6 m4 l4">
+                    <a href="/arcade">
+                        <div class="card-panel grey lighten-2 hoverable">
+                            <img src="img/svg/arcade.svg">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Last games played recently -->
+
+
+        </div>
+        <% include layouts/footer %>
+            <% include layouts/jsimports %>
+</body>
+
+</html>

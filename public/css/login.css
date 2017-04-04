@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+#login-card {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 1%
+}
+
+#title-card {
+    font-family: 'Freckle Face', cursive;
+}
+
+input[type] {
+    width: 50%;
+}
+
+h5 {
+    width: 50%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+    margin-left: 26%;
+}
+
+h5 span {
+    background: #eeeeee;
+    padding: 0 10px;
+}
+
+.sn-btn {
+    margin-top: 2%;
+}

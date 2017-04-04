@@ -1,0 +1,48 @@
+<html>
+<title>
+    <%= title %>
+</title>
+
+<head>
+    <% include layouts/header %>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="/css/card.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <% include layouts/navbar %>
+
+        <div class="container" style="margin-top:5%">
+
+          <%if (games.length === 0) { %>
+            <h1 class="center-align" style="font-family: 'Poiret One', cursive;">Not Found Games :(</h1>
+         <% } %>
+            <!-- games -->
+            <div class="row">
+                <% for(var i=0; i<games.length; i++) {%>
+                    <div class="col s6 m4 l3">
+                        <div class="ui card">
+                            <a class="image" href="<%= games[i]['description'].console %>/<%= games[i].gameID %>">
+                          <img src="<%= games[i].cover_img %>">
+                      </a>
+                            <div class="content">
+                                <a class="header" href="#">
+                                    <%= games[i].title %>
+                                </a>
+                                <div class="extra content">
+                                    <i class="user icon"></i>
+                                    <%= games[i].views %> Views
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+            </div>
+
+
+        </div>
+        <% include layouts/footer %>
+            <% include layouts/jsimports %>
+</body>
+
+</html>
