@@ -3,6 +3,8 @@ node_modules/
 #Project docs
 docs/
 #roms
-public/roms/*
-#Auth config
+*.gb
+*.gba
+*.gbc
+#auth
 src/config/auth.js

@@ -1,7 +1,7 @@
 {
   "name": "emulador.io",
   "version": "1.0.0",
-  "description": "Web App where users can play old-school videogames",
+  "description": "Nodejs console handheld social network",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
