@@ -1,13 +1,16 @@
 /**
- *
+ * Search controller
  */
 
+'use strict';
 const Gb = require('../models/gb'),
     Gbc = require('../models/gbc'),
     Gba = require('../models/gba'),
     Nes = require('../models/nes'),
     Snes = require('../models/snes');
+
 module.exports = {
+  
     all: (req, res) => {
         let foundGames = [];
         Promise.all([searchGb(req.query.game), searchGbc(req.query.game), searchGba(req.query.game), searchNes(req.query.game), searchSnes(req.query.game)])

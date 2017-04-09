@@ -1,17 +1,15 @@
 /**
- * User model which collects all needed fields
- * to populate an user schema
+ * User model
  */
 
+'use strict';
 const mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     ApiAuthSchema = require('./apiAuth'),
     SavedGameSchema = require('./savedGame'),
     bcrypt = require('bcrypt-nodejs');
 
-
 mongoose.Promise = global.Promise;
-
 const UserSchema = new Schema({
     credentials: ApiAuthSchema,
     authType: {
@@ -72,7 +70,7 @@ const UserSchema = new Schema({
  *
  *
  */
- 
+
 
 /************************ Schema Methods *************************/
 

@@ -1,3 +1,8 @@
+/**
+ * Chat module
+ */
+
+'use strict';
 const sessionMiddleware = require('../middlewares/session'),
     User = require('../models/user');
 

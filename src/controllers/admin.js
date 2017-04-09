@@ -1,11 +1,8 @@
 /**
- * Admin controller to manage those operations
- * that can only be done by a user with the role
- * of admin
+ * Admin controller
  */
 
 'use strict';
-
 const User = require('../models/user'),
     Gb = require('../models/gb'),
     Gbc = require('../models/gbc'),

@@ -1,8 +1,8 @@
 /**
- *
- *
+ * Signup controller
  */
 
+'use strict';
 const User = require('../models/user'),
     mailer = require('../utils/mailerClass');
 
@@ -13,7 +13,6 @@ module.exports = {
         });
     },
     local: function local(req, res) {
-
         const user = new User({
             'credentials.local': {
                 'password': User.generateHash(req.body.password)
@@ -24,7 +23,7 @@ module.exports = {
             'surname': req.body.surname,
             'email': req.body.email
         });
-
+        
         /*
          * Validation of the user instance properties
          */

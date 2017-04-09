@@ -1,7 +1,7 @@
 {
   "name": "emulador.io",
   "version": "1.0.0",
-  "description": "Nodejs console handheld social network",
+  "description": "Nodejs console handheld Social Network",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
@@ -27,7 +27,6 @@
     "express-session": "^1.15.1",
     "materialize": "^1.0.0",
     "mongoose": "^4.8.4",
-    "mongoose-auto-increment": "^5.0.1",
     "multer": "^1.3.0",
     "nodemailer": "^3.1.4",
     "passport": "^0.3.2",
@@ -38,8 +37,6 @@
     "socket.io": "^1.7.3"
   },
   "devDependencies": {
-    "eslint": "^3.16.1",
-    "eslint-config-google": "^0.7.1",
     "mocha": "^3.2.0"
   }
 }

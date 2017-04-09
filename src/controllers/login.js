@@ -1,8 +1,8 @@
 /**
- * Login controller to authenticate the client
- * so it can either or not acess the requested
- * view
+ * Login controller
  */
+
+'use strict';
 const User = require('../models/user'),
     mailer = require('../utils/mailerClass'),
     KeyCode = require('../utils/keycode');

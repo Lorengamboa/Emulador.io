@@ -5,7 +5,6 @@
 'use strict';
 
 require('dotenv').config();
-
 const express = require('express'),
     app = express(),
     mongoose = require('mongoose'),
@@ -16,9 +15,10 @@ const express = require('express'),
     colors = require('colors'),
     flash = require('connect-flash');
 
+//PASSPORT MAIN CONFIGURATION >>>
 require('./src/config/passport')(passport);
 
-//CONFIGURATION >>>
+//STAGE CONFIGURATION >>>
 /*
    Defining enviroment
 */
@@ -64,12 +64,11 @@ app.engine('html', require('ejs').renderFile);
 app.use(cookieParser());
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(sessionMiddleware);
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
+app.use('/api', require('./src/routers/romApi'));
 
 module.exports = app;

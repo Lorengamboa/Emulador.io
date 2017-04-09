@@ -1,3 +1,8 @@
+/**
+ * GamebBy model
+ */
+
+'use sctict';
 const mongoose = require('mongoose'),
     counter = require('./counter'),
     gameDescription = require('./gameDescription'),

@@ -1,3 +1,8 @@
+/**
+ * Game schema
+ */
+
+'use sctict';
 const mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 

@@ -1,9 +1,15 @@
+/**
+ * Session middleware
+ */
+
+'use strict';
 var session = require('express-session'),
     mongoose = require('mongoose'),
     MongoStore = require('connect-mongo')(session);
+    require('dotenv').config();
 
 var sessionMiddleware = session({
-    secret: 'cHoRiZoDeCaNtIpAlO93',
+    secret: process.env.SESSION_SECRET,
     resave: true,
     saveUninitialized: true,
     cookie: {

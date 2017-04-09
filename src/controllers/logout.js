@@ -1,10 +1,8 @@
 /**
- * Login controller so the authenticated client
- * can kill session instanlly
+ * Login controller
  */
 
 'use strict';
-
 exports.logout = function(req, res) {
     if (req.isAuthenticated()) {
         req.logout();

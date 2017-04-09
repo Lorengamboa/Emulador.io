@@ -2,6 +2,8 @@
  * Middleware functions that will be eventually added to router.js
  */
 
+'use strict';
+
 /* Checks if current client is logged in as an actual register user */
 exports.checksLoggedIn = function(req, res, next) {
     res.authenticated = false;

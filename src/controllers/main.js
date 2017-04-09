@@ -3,6 +3,7 @@
  * and export it as a single module
  */
 
+'use strict';
 const indexController = require('../controllers/index'),
     loginController = require('../controllers/login'),
     signupController = require('../controllers/signup'),

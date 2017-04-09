@@ -1,6 +1,5 @@
 /**
- *
- *
+ * KeyClass to generate an arbitrary string
  */
 
 class KeyCodeClass {
@@ -8,17 +7,15 @@ class KeyCodeClass {
         this.keycode = null;
     }
     generateKeycode() {
-        var keycode = "";
-        var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
+        var keycode = "",
+            characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         for (var i = 0; i < 5; i++)
             keycode += characters.charAt(Math.floor(Math.random() * characters.length));
-            this.keycode = keycode;
+        this.keycode = keycode;
     }
     keycode() {
         return this.keycode;
     }
 }
-
 
 module.exports = KeyCodeClass;

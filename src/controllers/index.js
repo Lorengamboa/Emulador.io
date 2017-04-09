@@ -1,10 +1,8 @@
 /**
- *
- *
+ * Index controller
  */
 
 'use strict';
-
 module.exports = {
     view: (req, res) => {
         res.render('index', {
