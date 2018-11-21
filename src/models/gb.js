@@ -83,8 +83,15 @@ GbSchema.pre('save', function(next) {
         }
     }, function(error, counter) {
         if (error) return next(error);
+        try {
         doc.gameID = counter.seq.toString();
-        next();
+        } catch (error) {
+            return error;
+        }
+        finally {
+            next();
+        }
+
     });
 });
 
